@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f7fa">
+  <meta name="description" content="AeroHub, tu espacio de estudio y herramientas de aeronáutica.">
+  <title>AeroHub · Centro de estudio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script defer src="site-config.js"></script>
+  <script defer src="assets/app.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Menú principal">
+      <div class="brand-row">
+        <a class="brand" href="#inicio" aria-label="AeroHub, inicio" id="brandHome">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 44 44" fill="none"><path d="M21.9 4.5 26 17.4 39.5 22l-13.6 4.2-4 13.3-4.2-13.3L4.5 22l13.2-4.6 4.2-12.9Z" fill="currentColor"/><path d="m22 12.5 2.8 8.8 8.9.7-8.9 2.4-2.8 8.1-2.5-8.1-9-2.4 9-.7 2.5-8.8Z" fill="#0b111b"/></svg>
+          </span>
+          <span class="brand-copy"><strong>AeroHub</strong><small>CENTRO DE ESTUDIO</small></span>
+        </a>
+        <button class="icon-button mobile-close" id="closeSidebar" aria-label="Cerrar menú" title="Cerrar menú">×</button>
+      </div>
+
+      <button class="home-link active" id="homeLink" type="button">
+        <span class="nav-icon" aria-hidden="true">⌂</span><span>Inicio</span><kbd>H</kbd>
+      </button>
+
+      <div class="sidebar-caption"><span>BIBLIOTECA</span><button id="collapseAll" class="text-icon-button" title="Plegar todas las secciones" aria-label="Plegar todas las secciones">⌃</button></div>
+      <nav id="resourceTree" class="resource-tree" aria-label="Recursos"></nav>
+
+      <div class="sidebar-bottom">
+        <div class="status-indicator"><span class="status-dot"></span><span>Biblioteca local</span><span class="status-label">OFFLINE</span></div>
+        <div class="sidebar-footnote">Organiza tus apuntes.<br>Despeja tu ruta.</div>
+      </div>
+    </aside>
+
+    <div class="sidebar-scrim" id="sidebarScrim"></div>
+
+    <main class="main-panel">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="icon-button menu-toggle" id="openSidebar" aria-label="Abrir menú" title="Abrir menú">☰</button>
+          <div class="breadcrumbs"><span>ESPACIO DE TRABAJO</span><span class="crumb-slash">/</span><strong id="breadcrumbCurrent">Inicio</strong></div>
+        </div>
+        <div class="topbar-actions">
+          <label class="search-box" for="globalSearch">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 4.5 4.5"></path></svg>
+            <input id="globalSearch" type="search" placeholder="Buscar recursos..." autocomplete="off" aria-label="Buscar recursos">
+            <kbd>⌘ K</kbd>
+          </label>
+          <div class="avatar" title="Tu espacio de estudio">AH</div>
+        </div>
+      </header>
+
+      <section class="content-wrap">
+        <div id="homeView" class="home-view">
+          <div class="welcome-strip"><span class="eyebrow"><span class="eyebrow-line"></span> TU ESPACIO DE ESTUDIO</span><span class="date-chip" id="todayLabel">AERONÁUTICA · RECURSOS</span></div>
+          <section class="hero-card">
+            <div class="hero-grid" aria-hidden="true"></div>
+            <div class="hero-copy">
+              <div class="hero-kicker"><span class="live-dot"></span> INGENIERÍA · AERODINÁMICA · TECNOLOGÍA</div>
+              <h1>AeroHub<span class="hero-title-period">.</span></h1>
+              <p>Tu espacio para estudiar, explorar conceptos de ingeniería y reunir teoría, herramientas y referencias visuales en un mismo lugar.</p>
+              <button class="primary-button" id="exploreButton" type="button">Explorar biblioteca <span aria-hidden="true">↗</span></button>
+              <div class="hero-topic-tags"><span>Aerodinámica</span><span>Energía eólica</span><span>Perfiles NACA</span></div>
+            </div>
+            <div class="hero-gallery" aria-label="Referencias visuales de ingeniería">
+              <figure class="hero-image-card wing-image">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/BMW_M8_GTE_spoiler.jpg/960px-BMW_M8_GTE_spoiler.jpg" alt="Alerón trasero de un coche de competición, visto de cerca" loading="eager">
+                <figcaption><span class="image-index">01 / AUTOMOCIÓN</span><strong>Alerón de coche</strong><a href="https://commons.wikimedia.org/wiki/File:BMW_M8_GTE_spoiler.jpg" target="_blank" rel="noopener noreferrer">Ver fuente <span aria-hidden="true">↗</span></a></figcaption>
+              </figure>
+              <figure class="hero-image-card turbine-image">
+                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Wind_turbine_farm%2C_Sault_Ste_Marie%2C_Ontario%2C_Canada.jpg/960px-Wind_turbine_farm%2C_Sault_Ste_Marie%2C_Ontario%2C_Canada.jpg" alt="Aerogeneradores de un parque eólico al aire libre" loading="eager">
+                <figcaption><span class="image-index">02 / ENERGÍA</span><strong>Aerogenerador</strong><a href="https://commons.wikimedia.org/wiki/File:Wind_turbine_farm,_Sault_Ste_Marie,_Ontario,_Canada.jpg" target="_blank" rel="noopener noreferrer">Ver fuente <span aria-hidden="true">↗</span></a></figcaption>
+              </figure>
+              <figure class="hero-image-card naca-image">
+                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/NACA_0015.svg/960px-NACA_0015.svg.png" alt="Perfil aerodinámico NACA 0015 representado como una sección transversal" loading="eager">
+                <figcaption><span class="image-index">03 / AERODINÁMICA</span><strong>Perfil NACA 0015</strong><a href="https://commons.wikimedia.org/wiki/File:NACA_0015.svg" target="_blank" rel="noopener noreferrer">Ver fuente <span aria-hidden="true">↗</span></a></figcaption>
+              </figure>
+            </div>
+            <div class="hero-bottom-line"><span>APRENDE · DISEÑA · EXPERIMENTA</span><span>EST. 2026 <i>✳</i> AEROHUB</span></div>
+          </section>
+
+          <section class="metrics-row" aria-label="Resumen de biblioteca">
+            <div class="metric"><div class="metric-icon doc-icon">▤</div><div><strong id="pdfCount">8</strong><span>Documentos PDF</span></div></div>
+            <div class="metric"><div class="metric-icon tool-icon">⌘</div><div><strong id="htmlCount">2</strong><span>Herramientas HTML</span></div></div>
+            <div class="metric"><div class="metric-icon folder-icon">⌁</div><div><strong id="categoryCount">2</strong><span>Categorías</span></div></div>
+            <div class="metric metric-note"><span class="metric-note-icon">✦</span><div><strong>Tu ritmo,</strong><span>tu trayectoria.</span></div></div>
+          </section>
+
+          <section class="library-section" id="librarySection">
+            <div class="section-heading"><div><span class="section-overline">ACCESO RÁPIDO</span><h2>Explora tus recursos<span class="heading-period">.</span></h2></div><span class="section-hint">Selecciona un elemento para abrirlo <span aria-hidden="true">↘</span></span></div>
+            <div class="category-cards" id="categoryCards"></div>
+            <div class="section-heading all-heading"><div><span class="section-overline">BIBLIOTECA COMPLETA</span><h2>Todos los recursos<span class="heading-period">.</span></h2></div><span class="results-count" id="resultsCount">10 ELEMENTOS</span></div>
+            <div class="resource-grid" id="resourceCards"></div>
+            <div id="noResults" class="empty-state" hidden><span class="empty-icon">⌕</span><strong>No encontramos ese recurso</strong><p>Prueba con otro término o revisa el nombre del archivo.</p><button id="clearSearch" class="subtle-button" type="button">Limpiar búsqueda</button></div>
+          </section>
+          <footer class="home-footer"><span>AEROHUB <b>—</b> TU ESPACIO DE ESTUDIO</span><span>HECHO PARA IR MÁS LEJOS <span aria-hidden="true">↗</span></span></footer>
+        </div>
+
+        <section id="viewerView" class="viewer-view" hidden>
+          <div class="viewer-heading">
+            <div class="viewer-title-wrap"><button class="back-link" id="backHome" type="button">← <span>Volver al inicio</span></button><div class="viewer-filetype" id="viewerFiletype">DOCUMENTO PDF</div><h1 id="viewerTitle">Título del recurso</h1><p id="viewerDescription">Abre el recurso en esta ventana o en una pestaña aparte.</p></div>
+            <div class="viewer-actions"><button class="secondary-button" id="openNewTab" type="button">Abrir en pestaña nueva <span aria-hidden="true">↗</span></button></div>
+          </div>
+          <div class="viewer-frame-shell"><div class="frame-topline"><span class="frame-dots"><i></i><i></i><i></i></span><span id="framePath">RECURSO LOCAL</span><span class="frame-ready"><i></i> PREVISUALIZACIÓN</span></div><iframe id="resourceFrame" title="Contenido del recurso" src="about:blank"></iframe></div>
+          <p class="viewer-tip"><span aria-hidden="true">ⓘ</span> Si el documento no aparece, comprueba que el archivo existe en la ruta configurada y que has iniciado la web con Live Server.</p>
+        </section>
+      </section>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
